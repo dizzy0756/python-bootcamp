@@ -13,9 +13,11 @@ class Book:
     
     def display(self):
         print(f"'{self.title}' by {self.author}")
+        if self.is_borrowed == True:
+            print("Status : Not available")
+        else:
+            print("Status : Available")
 
-    def __str__(self, value):
-        return self.title == value
 
 class Ebook(Book):
     def __init__(self, title, author,file_size):
@@ -26,8 +28,19 @@ class Ebook(Book):
         super().display()
         print(f"Size : {self.file_size}")
     
-Library = []
+class Library():
+    def __init__(self):
+        self.books = []
 
+    def add_book(self,book):
+        self.books.append(book)
+
+    def display_books(self):
+        for book in self.books:
+            book.display()
+
+
+library = Library()
 while True:
     print("1. Add Book")
     print("2. Borrow Book")
@@ -55,26 +68,36 @@ while True:
                 book = Ebook(title,author,file_size)
             else:    
                 book = Book(title,author)
-            Library.append(book)
+            
+            library.add_book(book)
 
         case 2:
             title = input("Enter the title of the book you want to borrow")
-            for item in Library:
-                if item.__str__(title):
+            found = False
+            for item in library.books:
+                if item.title == title:
+                    found = True
                     if item.is_borrowed == True:
                         print("Book is borrowed by someone else")
                     else:
                         item.borrow()
-
+            if found == False:
+                print(f"Book with the title '{title}' does not exist in the library")
         case 3:
             title = input("Enter the title of the book you want to return")
-            for item in Library:
-                if item.__eq__(title):
-                    item.is_borrowed = False
+            found = False
+            for item in library.books:
+                if item.title == title:
+                    found = True
+                    if item.is_borrowed == True:
+                        item.return_book()
+                    else:
+                        print(f"Cannot return the book. '{title}' was not borrowed by anyone.")
+            if found == False:
+                print(f"Book with the title '{title}' does not exist in the library")
             
         case 4:
-            for item in Library:
-                item.display()
+            library.display_books()
 
         case _:
             print("Invalid Choice")
