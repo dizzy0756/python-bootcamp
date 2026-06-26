@@ -1,0 +1,70 @@
+Day 9 – Working with JSON & Building a Contact Book
+
+Date: June 26, 2026
+
+📚 Topics Learned
+        JSON Data Management
+        Concepts Covered
+        Saving application data to JSON files.
+        Loading data from JSON files.
+        Converting objects into dictionaries using to_dict().
+        Reconstructing objects from dictionaries using from_dict().
+        Serializing and deserializing collections of objects.
+        Organizing data persistence into separate helper functions.
+        Handling file-related exceptions when reading and writing JSON.
+
+💡 Key Takeaways
+        JSON is an excellent format for storing structured application data.
+        Separating data persistence logic from business logic makes programs easier to maintain.
+        Custom Python objects must be converted into dictionaries before being stored as JSON.
+        Well-designed classes simplify serialization and future expansion of a project.
+
+🛠 Project Built
+        Contact Book
+        Features
+        Add new contacts.
+        View all saved contacts.
+        Search contacts.
+        Update existing contact information.
+        Delete contacts.
+        Save contacts to a JSON file.
+        Load contacts automatically when the application starts.
+        Skills Practiced
+        Object-Oriented Programming
+        Working with lists of objects
+        JSON serialization and deserialization
+        File handling
+        Exception handling
+        Modular programming
+        CRUD (Create, Read, Update, Delete) operations
+
+🧠 Challenges Faced
+        Converting a list of custom objects into JSON-serializable dictionaries.
+        Loading JSON data back into Python objects.
+        Debugging serialization errors such as unsupported object types.
+        Designing methods that keep the code clean and reusable.
+
+✅ What I Improved
+        Improved understanding of data persistence.
+        Became more comfortable organizing projects into multiple files.
+        Learned how to separate application logic from storage logic.
+        Improved debugging skills by resolving JSON serialization issues.
+        Gained more experience designing larger Python projects.
+
+📈 Progress Summary
+        Today's Contact Book project strengthened my understanding of how real applications manage and persist data.
+        I learned how to save collections of custom objects to JSON files and restore them when the application starts. 
+        This project reinforced good software design practices by separating data storage from application logic and using 
+        reusable methods for object conversion.
+
+Project Completed:
+        ✅ Contact Book
+
+🚀 Skills Gained
+        JSON file handling
+        Object serialization
+        Object deserialization
+        CRUD application development
+        Multi-file project organization
+        Python debugging
+        Data persistence
