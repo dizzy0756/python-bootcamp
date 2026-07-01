@@ -1,0 +1,151 @@
+# Day 13 – Building a REST API with Flask & SQLite
+
+**Date:** July 2, 2026
+
+---
+
+# 📚 Topics Learned
+
+## Flask REST API
+
+### Concepts Covered
+
+* Creating a Flask application.
+* Registering routes using a separate routes module.
+* Handling HTTP requests.
+* Returning JSON responses.
+* Using appropriate HTTP status codes.
+* Designing RESTful endpoints.
+
+---
+
+## SQLite Integration
+
+### Concepts Covered
+
+* Connecting Flask with an SQLite database.
+* Creating database tables automatically.
+* Performing CRUD operations through SQL.
+* Using parameterized SQL queries.
+* Managing database connections using context managers.
+
+---
+
+## Request Validation
+
+### Concepts Covered
+
+* Reading JSON request bodies using `request.get_json()`.
+* Validating required fields.
+* Checking data types.
+* Validating business rules (positive IDs, minimum age, non-empty strings).
+* Returning descriptive error messages for invalid requests.
+
+---
+
+## Project Architecture
+
+### Concepts Covered
+
+* Separating the project into modules.
+* Keeping models, database logic, and routes independent.
+* Using helper methods (`to_dict()`, `from_dict()`, `to_tuple()`) for clean data conversion.
+* Writing reusable and maintainable code.
+
+---
+
+# 💡 Key Takeaways
+
+* REST APIs expose application functionality through HTTP endpoints.
+* Proper validation prevents invalid data from reaching the database.
+* Separating concerns makes applications easier to understand, maintain, and expand.
+* Returning meaningful HTTP status codes improves communication between the server and clients.
+
+---
+
+# 🛠 Project Built
+
+## Student Record Manager REST API
+
+### Features
+
+* Add students.
+* View all students.
+* Search a student by ID.
+* Update student information.
+* Delete students.
+* Store records in an SQLite database.
+* Validate incoming requests.
+* Return appropriate HTTP status codes and error messages.
+
+### Skills Practiced
+
+* Flask
+* REST API development
+* SQLite integration
+* SQL CRUD operations
+* Request validation
+* Exception handling
+* Modular project structure
+* JSON request and response handling
+
+---
+
+# 🔍 Improvements Observed
+
+* Structured the application into dedicated modules (`routes`, `database`, and `model`).
+* Built a reusable `Student` model for converting between Python objects, dictionaries, and database tuples.
+* Implemented comprehensive validation before processing requests.
+* Handled duplicate IDs using `sqlite3.IntegrityError`.
+* Used HTTP status codes correctly to represent different outcomes.
+* Wrote cleaner and more maintainable code than in previous projects.
+
+---
+
+# 🧠 Challenges Faced
+
+* Connecting Flask routes to database operations.
+* Designing REST endpoints for CRUD functionality.
+* Validating request data before database interaction.
+* Handling database exceptions gracefully.
+* Organizing the application into multiple modules.
+
+---
+
+# ✅ What I Improved
+
+* Learned the fundamentals of REST API development.
+* Improved project organization through modular design.
+* Gained confidence working with Flask and SQLite together.
+* Strengthened input validation and error handling.
+* Wrote code that is closer to real-world backend applications.
+
+---
+
+# 📈 Progress Summary
+
+Today's project marked my transition from standalone Python applications to backend web development. I successfully built a REST API that performs CRUD operations on an SQLite database while validating requests and returning meaningful HTTP responses. This project introduced me to the fundamentals of backend architecture and API design.
+
+Project Completed:
+
+* ✅ Student Record Manager REST API
+
+---
+
+# 🚀 Skills Gained
+
+* Flask
+* REST API design
+* HTTP methods (GET, POST, PUT, DELETE)
+* JSON request handling
+* SQLite integration
+* SQL CRUD operations
+* Request validation
+* Exception handling
+* Modular application architecture
+
+---
+
+# 🎯 Looking Ahead
+
+I now understand how Python applications can expose functionality through REST APIs. This lays the foundation for building full-stack web applications, integrating frontend interfaces, and eventually creating AI-powered web services that communicate through APIs.
